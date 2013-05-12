@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/> 
+    <LINK href="timeline.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+    <title>FixtureLocker.com</title>
+    <script type="text/javascript">
+
+function showChart(i)
+{
+    if (window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            var quote = eval("(" + xmlhttp.responseText + ")");
+
+            //Creates 3 series so that each one can be given a different colour. Only one row is made visible per series
+            data = new google.visualization.DataTable();
+            data.addColumn('string', 'Result');
+            data.addColumn('number', '');
+            data.addColumn('number', '');
+            data.addColumn('number', '');                
+            data.addRows([[quote.HomeTeam, quote.Home,0,0]]);
+            data.addRows([['Draw', 0,quote.Draw,0]]);
+            data.addRows([[quote.AwayTeam, 0,0,quote.Away]]);
+                
+            var options = {
+                'isStacked':true,
+                'width':500,
+                'height':300,
+                'colors':['2E9AFE','#252525','FE2E2E'],
+                'legend':{position:'none'} 
+                };
+
+            chart.draw(data, options);
+        }
+    }
+    
+    var url = "index.php?home=" + x[i].getElementsByTagName("HomeTeam")[0].childNodes[0].nodeValue + "&away=" + x[i].getElementsByTagName("AwayTeam")[0].childNodes[0].nodeValue; 
+    xmlhttp.open("GET",url,true);
+    xmlhttp.send();
+}
+
+function showTimeline(i)
+{   
+    if (window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {   
+            var results = eval("(" + xmlhttp.responseText + ")");
+            var html = "";
+            html += "<li><ul><li><span><a1><br><br><br> Home: </a1></span></li><li><span><a1><br> Away: </a1></span></li></ul></li>";
+             
+            for(var i = 0; i < results.length; i++)
+            {
+                html += "<li><h3><span><a>" + results[i].Season + "</a></span></h3><ul><li><span><a title='"+ results[i].HomeFixture +"'>" + results[i].HFix_HGoals + " - " + results[i].HFix_AGoals + "</a></span></li><li><span><a title='"+ results[i].AwayFixture +"'>" + results[i].AFix_HGoals + " - " + results[i].AFix_AGoals + "</a></span></li></ul></li>";
+            }
+            
+            document.getElementById("year").innerHTML = html;
+        }
+    }
+
+    var url = "index2.php?home=" + x[i].getElementsByTagName("HomeTeam")[0].childNodes[0].nodeValue + "&away=" + x[i].getElementsByTagName("AwayTeam")[0].childNodes[0].nodeValue;
+    xmlhttp.open("GET",url,true);
+    xmlhttp.send();
+}
+
+$(document).ready(function () {
+  $('#timeline').mousedown(function (event) {
+    // attach 3 pieces of data to the #timeline element
+    $(this)
+      .data('down', true) // a flag indicating the mouse is down
+      .data('x', event.clientX) // the current mouse down X coord
+      .data('scrollLeft', this.scrollLeft); // the current scroll position
+        
+    // return false to avoid selecting text and dragging links within the scroll window
+    return false;
+  }).mouseup(function (event) {
+    // on mouse up, cancel the 'down' flag
+    $(this).data('down', false);
+  }).mousemove(function (event) {
+    // if the mouse is down - start the drag effect
+    if ($(this).data('down') == true) {
+      this.scrollLeft = $(this).data('scrollLeft') + $(this).data('x') - event.clientX;
+    }
+  }).css({
+    'overflow' : 'hidden', // change to hidden for JS users
+    'cursor' : '-moz-grab' // add the grab cursor
+  });
+});
+
+$(window).mouseout(function (event) {
+  if ($('#timeline').data('down')) {
+    try {
+      if (event.originalTarget.nodeName == 'DIV' || event.originalTarget.nodeName == 'HTML') {
+        $('#timeline').data('down', false);
+      }                
+    } catch (e) {}
+  }
+});
+
+
+$(document).ready(function(){
+    $("p.flip").click(function(){
+
+        if($('#timeline').is(':visible') == true){
+            $('#chart_div').show();    
+        }
+
+        $('.chart').slideUp('fast');
+        $('.time').hide();
+        $('.time_button').hide();
+        $('.chart_button').hide();
+
+        if($(this).next().is(':hidden') == true){
+            
+            drawChart();
+            $(this).after($("#chart_div"));
+            $(this).next().slideDown('slow');
+            var i = $(this).attr("id");
+            $('#time_button'+i).slideDown('slow');
+        }
+
+        $(".time_button").click(function(){
+            if($('#time_button'+i).is(':visible') == true){
+                
+                $('#chart_div').hide();
+                $(this).before($("#timeline"));
+                showTimeline(i);
+                $('#timeline').show();
+                $('.time_button').hide();
+                $('#chart_button'+i).show();
+            }
+            
+        $(".chart_button").click(function(){
+            if($('#chart_button'+i).is(':visible') == true){
+                
+                $('#timeline').hide();
+                $('#chart_div').show();
+                $('.chart_button').hide();
+                $('#time_button'+i).show();
+            }
+            
+         }); 
+      });
+   });
+});            
+
+function close_windows()
+{
+    $('.chart').slideUp('fast');
+    $('.time').slideUp('fast');
+    $('.time_button').hide();
+    $('.chart_button').hide();
+}
+
+//Ajax call on page load to Fixture_list.xml
+
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("GET","fixture_list.xml",false);
+    xmlhttp.send();
+    xmlDoc=xmlhttp.responseXML; 
+    x=xmlDoc.getElementsByTagName('E0');
+
+
+var timeout	= 500;
+var closetimer	= 0;
+var ddmenuitem	= 0;
+
+// open hidden layer
+function mopen(id)
+{	
+	// cancel close timer
+	mcancelclosetime();
+
+	// close old layer
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	// get new layer and show it
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+
+// close showed layer
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+
+// close layer when click-out
+document.onclick = mclose; 
+
+
+
+
+$(document).ready(function(){
+    for (var i=0;i<20;i++)
+    {  
+        if (x[i] == undefined)
+        {   
+            document.getElementById(i).style.visibility="hidden";
+        }
+    }
+})            
+
+    </script>
+  </head>
+
+   
+
+  <body>
+    <div id='nav'> 
+      <ul id="sddm">
+        <li><a href="index.html" 
+            onmouseover="mopen('m1')" 
+            onmouseout="mclosetime()"
+            >Domestic</a>
+          <div id="m1" 
+            onmouseover="mcancelclosetime()" 
+            onmouseout="mclosetime()">
+            <a href="#nav" onclick="javascript:close_windows(); x=xmlDoc.getElementsByTagName('E0'); drawFixtures();" >Premiership</a>
+            <a href="#nav" onclick="javascript:close_windows(); x=xmlDoc.getElementsByTagName('E1'); drawFixtures();">Championship</a>
+            <a href="#nav" onclick="javascript:close_windows(); x=xmlDoc.getElementsByTagName('E2'); drawFixtures();" >League 1</a>
+            <a href="#nav" onclick="javascript:close_windows(); x=xmlDoc.getElementsByTagName('E3'); drawFixtures();" >League 2</a>
+            <a href="#nav" onclick="javascript:close_windows(); x=xmlDoc.getElementsByTagName('EC'); drawFixtures();" >Conference</a>
+            <a href="#nav" onclick="javascript:close_windows(); x=xmlDoc.getElementsByTagName('SC0'); drawFixtures();" >SPL</a>
+          </div>
+        </li>
+        <li><a href="index2.html" 
+        onmouseover="mopen('m2')" 
+        onmouseout="mclosetime()">European</a>
+          <div id="m2" 
+            onmouseover="mcancelclosetime()" 
+            onmouseout="mclosetime()">
+            <a href="#nav" onclick="javascript:close_windows(); x=xmlDoc.getElementsByTagName('I1'); drawFixtures();" >Serie A</a>
+            <a href="#nav" onclick="javascript:close_windows(); x=xmlDoc.getElementsByTagName('D1'); drawFixtures();" >Bundesliga</a>
+            <a href="#nav" onclick="javascript:close_windows(); x=xmlDoc.getElementsByTagName('SP1'); drawFixtures();" >La Liga</a>
+            <a href="#nav" onclick="javascript:close_windows(); x=xmlDoc.getElementsByTagName('N1'); drawFixtures();" >KPN Eredivisie</a>
+            <a href="#nav" onclick="javascript:close_windows(); x=xmlDoc.getElementsByTagName('F1'); drawFixtures();" >Le Championnat</a>
+          </div>
+        </li>
+        <li><a href="search.html">Search</a></li>
+      </ul>
+    <div style="clear:both"></div>    </div>
+
+    <div class='background'>
+    <div id='border'>
+    <div id='welcome'>
+    <br><h4>Welcome to FixtureLocker.com!
+    <br>Here you can check the recent history of any league fixture...
+    <br></br>
+    </div>
+
+
+    <script>
+
+    google.load('visualization', '1.0', {'packages':['corechart']});
+
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() 
+    {
+    chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+    }
+
+
+    for (var i=0;i<20;i++)
+    {  
+        if (x[i] == undefined)
+        {   
+            document.write("<p id="+i+" class='flip' onclick='showChart("+i+")' title='blank';>"); 
+            document.write("<div class='time_button' id='time_button"+i+"'><input  type='submit' value='Timeline'></div>");
+            document.write("<div class='chart_button' id='chart_button"+i+"'><input  type='submit' value='Chart'></div>");
+        }
+        else
+        { 
+            document.write("<p id="+i+" class='flip' onclick='showChart("+i+")';>");
+            document.write(x[i].getElementsByTagName("HomeTeam")[0].childNodes[0].nodeValue);
+            document.write(" v ");
+            document.write(x[i].getElementsByTagName("AwayTeam")[0].childNodes[0].nodeValue);
+            document.write("<div class='time_button' id='time_button"+i+"'><input  type='submit' value='Timeline'></div>");
+            document.write("<div class='chart_button' id='chart_button"+i+"'><input  type='submit' value='Chart'></div>");
+        }
+    }  
+    
+    function drawFixtures()
+    {
+        for (var i=0;i<20;i++)
+        {  
+            if (x[i] == undefined)
+            {
+                var html = "";
+                document.getElementById(i).innerHTML = html;
+                document.getElementById(i).style.visibility="hidden";
+            }
+            else
+            {
+                document.getElementById(i).style.visibility="visible";
+                html = x[i].getElementsByTagName("HomeTeam")[0].childNodes[0].nodeValue;
+                html += " v ";
+                html += x[i].getElementsByTagName("AwayTeam")[0].childNodes[0].nodeValue;
+                document.getElementById(i).innerHTML = html;
+            }
+        }
+    } 
+    
+    document.write("<div class='chart' id='chart_div'></div>");
+    document.write("<div class='time' id='timeline'><ul class='tl-events'><div id='year'></div></div>"); 
+      
+    </script>
+    </div>
+    </div>
+  </body>
+</html>

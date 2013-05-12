@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  
+  <head>
+    <LINK href="timeline.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+    <title>FixtureLocker.com</title>
+    <script>
+
+    function showChart()
+    {
+           
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+            
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+            
+                var quote = eval("(" + xmlhttp.responseText + ")");
+
+            //Creates 3 series so that each one can be given a different colour. Only one row is made visible per series
+            data = new google.visualization.DataTable();
+            data.addColumn('string', 'Result');
+            data.addColumn('number', '');
+            data.addColumn('number', '');
+            data.addColumn('number', '');                
+            data.addRows([[quote.HomeTeam, quote.Home,0,0]]);
+            data.addRows([['Draw', 0,quote.Draw,0]]);
+            data.addRows([[quote.AwayTeam, 0,0,quote.Away]]);
+                
+            var options = {
+                'isStacked':true,
+                'width':500,
+                'height':300,
+                'colors':['2E9AFE','#252525','FE2E2E'],
+                'legend':{position:'none'} 
+                };
+
+                chart.draw(data, options);
+                document.getElementById('timeline').style.display = 'none';
+                document.getElementById('chart_div').style.display = 'block';
+
+        }
+    }
+        
+        var url = "index.php?home="+document.getElementById('home').value +"&away="+document.getElementById('away').value;
+        xmlhttp.open("GET",url,true);
+        xmlhttp.send();
+        }
+    
+    
+    function showTimeline()
+    { 
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {   
+            var results = eval("(" + xmlhttp.responseText + ")");
+            var html = "";
+            html += "<li><ul><li><span><a1><br><br><br> Home: </a1></span></li><li><span><a1><br> Away: </a1></span></li></ul></li>";
+             
+            for(var i = 0; i < results.length; i++)
+            {
+                html += "<li><h3><span><a>" + results[i].Season + "</a></span></h3><ul><li><span><a title='"+ results[i].HomeFixture +"'>" + results[i].HFix_HGoals + " - " + results[i].HFix_AGoals + "</a></span></li><li><span><a title='"+ results[i].AwayFixture +"'>" + results[i].AFix_HGoals + " - " + results[i].AFix_AGoals + "</a></span></li></ul></li>";
+            }
+             
+                document.getElementById("year").innerHTML = html;
+                document.getElementById('chart_div').style.display = 'none';
+                document.getElementById('timeline').style.display = 'block';
+                
+            }
+        }
+  
+        var url = "index2.php?home="+document.getElementById('home').value +"&away="+document.getElementById('away').value;
+        xmlhttp.open("GET",url,true);
+        xmlhttp.send();
+    }
+
+$(document).ready(function () {
+  $('#timeline').mousedown(function (event) {
+    $(this)
+      .data('down', true) // a flag indicating the mouse is down
+      .data('x', event.clientX) // the current mouse down X coord
+      .data('scrollLeft', this.scrollLeft); // the current scroll position
+        
+    return false;
+  }).mouseup(function (event) {
+    $(this).data('down', false);
+  }).mousemove(function (event) {
+    if ($(this).data('down') == true) {
+     this.scrollLeft = $(this).data('scrollLeft') + $(this).data('x') - event.clientX;
+    }
+  }).css({
+    'overflow' : 'hidden', // change to hidden for JS users
+    'cursor' : '-moz-grab' // add the grab cursor
+  });
+});
+
+$(window).mouseout(function (event) {
+  if ($('#timeline').data('down')) {
+    try {
+
+      if (event.originalTarget.nodeName == 'DIV' || event.originalTarget.nodeName == 'HTML') {
+        $('#timeline').data('down', false);
+      }                
+    } catch (e) {}
+  }
+});
+    </script>
+    </head>
+
+   
+
+    <body>
+      <div id='nav'> 
+        <ul id="sddm">
+          <li><a href="index.html">Domestic</a></li>
+          <li><a href="index2.html">European</a></li>
+          <li><a href="search.html">Search</a></li>
+        </ul>
+      <div style="clear:both"></div>    </div>
+      <div class='background'>
+      <div id='welcome'>
+      <br><h4>Welcome to FixtureLocker.com!
+      <br>Here you can check the recent history of any league fixture...
+      <br></br>
+      </div>
+
+      <div id='table'>
+      <table>
+        <tr>
+          <td>Home Team: <input id="home" type="text"/></td>
+          <td>Away Team: <input id="away" type="text"/></td>
+        </tr>
+      </table>
+      <br><input type="submit" value="Chart" onclick='showChart()'/><input type="submit" value="Timeline" onclick='showTimeline()'/>
+      </div>
+     <script>
+
+     google.load('visualization', '1.0', {'packages':['corechart']});
+
+     google.setOnLoadCallback(drawChart);
+
+     function drawChart() 
+     {
+     chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+     }
+
+     document.write("<div class='chart' id='chart_div'></div>");
+     document.write("<div class='time' id='timeline'><ul class='tl-events'><div id='year'></div></div>"); 
+   
+     </script>
+     </div>
+  </body>
+</html>

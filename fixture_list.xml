@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FIXTURES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+<D1><HomeTeam>Bayern Munich</HomeTeam><AwayTeam>Stuttgart</AwayTeam></D1>
+<D1><HomeTeam>Freiburg</HomeTeam><AwayTeam>FC Koln</AwayTeam></D1>
+<D1><HomeTeam>Hamburg</HomeTeam><AwayTeam>Mainz</AwayTeam></D1>
+<D1><HomeTeam>Hoffenheim</HomeTeam><AwayTeam>Nurnberg</AwayTeam></D1>
+<D1><HomeTeam>Kaiserslautern</HomeTeam><AwayTeam>Dortmund</AwayTeam></D1>
+<D1><HomeTeam>Leverkusen</HomeTeam><AwayTeam>Hannover</AwayTeam></D1>
+<D1><HomeTeam>M'gladbach</HomeTeam><AwayTeam>Augsburg</AwayTeam></D1>
+<D1><HomeTeam>Schalke 04</HomeTeam><AwayTeam>Hertha</AwayTeam></D1>
+<D1><HomeTeam>Wolfsburg</HomeTeam><AwayTeam>Werder Bremen</AwayTeam></D1>
+<D2><HomeTeam>Aachen</HomeTeam><AwayTeam>Karlsruhe</AwayTeam></D2>
+<D2><HomeTeam>Bochum</HomeTeam><AwayTeam>Braunschweig</AwayTeam></D2>
+<D2><HomeTeam>Dresden</HomeTeam><AwayTeam>St Pauli</AwayTeam></D2>
+<D2><HomeTeam>Duisburg</HomeTeam><AwayTeam>Erzgebirge Aue</AwayTeam></D2>
+<D2><HomeTeam>Ein Frankfurt</HomeTeam><AwayTeam>Munich 1860</AwayTeam></D2>
+<D2><HomeTeam>Greuther Furth</HomeTeam><AwayTeam>Fortuna Dusseldorf</AwayTeam></D2>
+<D2><HomeTeam>Ingolstadt</HomeTeam><AwayTeam>Cottbus</AwayTeam></D2>
+<D2><HomeTeam>Paderborn</HomeTeam><AwayTeam>Frankfurt FSV</AwayTeam></D2>
+<D2><HomeTeam>Union Berlin</HomeTeam><AwayTeam>Hansa Rostock</AwayTeam></D2>
+<E0><HomeTeam>Everton</HomeTeam><AwayTeam>Fulham</AwayTeam></E0>
+<E0><HomeTeam>Norwich</HomeTeam><AwayTeam>Liverpool</AwayTeam></E0>
+<E0><HomeTeam>Stoke</HomeTeam><AwayTeam>Arsenal</AwayTeam></E0>
+<E0><HomeTeam>Sunderland</HomeTeam><AwayTeam>Bolton</AwayTeam></E0>
+<E0><HomeTeam>Swansea</HomeTeam><AwayTeam>Wolves</AwayTeam></E0>
+<E0><HomeTeam>West Brom</HomeTeam><AwayTeam>Aston Villa</AwayTeam></E0>
+<E0><HomeTeam>Wigan</HomeTeam><AwayTeam>Newcastle</AwayTeam></E0>
+<E0><HomeTeam>Chelsea</HomeTeam><AwayTeam>QPR</AwayTeam></E0>
+<E0><HomeTeam>Tottenham</HomeTeam><AwayTeam>Blackburn</AwayTeam></E0>
+<E0><HomeTeam>Man City</HomeTeam><AwayTeam>Man United</AwayTeam></E0>
+<E1><HomeTeam>Barnsley</HomeTeam><AwayTeam>Brighton</AwayTeam></E1>
+<E1><HomeTeam>Birmingham</HomeTeam><AwayTeam>Reading</AwayTeam></E1>
+<E1><HomeTeam>Burnley</HomeTeam><AwayTeam>Bristol City</AwayTeam></E1>
+<E1><HomeTeam>Crystal Palace</HomeTeam><AwayTeam>Cardiff</AwayTeam></E1>
+<E1><HomeTeam>Derby</HomeTeam><AwayTeam>Peterboro</AwayTeam></E1>
+<E1><HomeTeam>Doncaster</HomeTeam><AwayTeam>Ipswich</AwayTeam></E1>
+<E1><HomeTeam>Leeds</HomeTeam><AwayTeam>Leicester</AwayTeam></E1>
+<E1><HomeTeam>Millwall</HomeTeam><AwayTeam>Blackpool</AwayTeam></E1>
+<E1><HomeTeam>Nott'm Forest</HomeTeam><AwayTeam>Portsmouth</AwayTeam></E1>
+<E1><HomeTeam>Southampton</HomeTeam><AwayTeam>Coventry</AwayTeam></E1>
+<E1><HomeTeam>Watford</HomeTeam><AwayTeam>Middlesbrough</AwayTeam></E1>
+<E1><HomeTeam>West Ham</HomeTeam><AwayTeam>Hull</AwayTeam></E1>
+<E2><HomeTeam>Brentford</HomeTeam><AwayTeam>Sheffield Weds</AwayTeam></E2>
+<E2><HomeTeam>Bury</HomeTeam><AwayTeam>Oldham</AwayTeam></E2>
+<E2><HomeTeam>Carlisle</HomeTeam><AwayTeam>Exeter</AwayTeam></E2>
+<E2><HomeTeam>Colchester</HomeTeam><AwayTeam>Tranmere</AwayTeam></E2>
+<E2><HomeTeam>Hartlepool</HomeTeam><AwayTeam>Leyton Orient</AwayTeam></E2>
+<E2><HomeTeam>Preston</HomeTeam><AwayTeam>Charlton</AwayTeam></E2>
+<E2><HomeTeam>Rochdale</HomeTeam><AwayTeam>Milton Keynes Dons</AwayTeam></E2>
+<E2><HomeTeam>Scunthorpe</HomeTeam><AwayTeam>Bournemouth</AwayTeam></E2>
+<E2><HomeTeam>Sheffield United</HomeTeam><AwayTeam>Stevenage</AwayTeam></E2>
+<E2><HomeTeam>Walsall</HomeTeam><AwayTeam>Huddersfield</AwayTeam></E2>
+<E2><HomeTeam>Wycombe</HomeTeam><AwayTeam>Notts County</AwayTeam></E2>
+<E2><HomeTeam>Yeovil</HomeTeam><AwayTeam>Chesterfield</AwayTeam></E2>
+<E3><HomeTeam>Aldershot</HomeTeam><AwayTeam>Rotherham</AwayTeam></E3>
+<E3><HomeTeam>Barnet</HomeTeam><AwayTeam>AFC Wimbledon</AwayTeam></E3>
+<E3><HomeTeam>Bristol Rvs</HomeTeam><AwayTeam>Accrington</AwayTeam></E3>
+<E3><HomeTeam>Cheltenham</HomeTeam><AwayTeam>Bradford</AwayTeam></E3>
+<E3><HomeTeam>Crawley Town</HomeTeam><AwayTeam>Hereford</AwayTeam></E3>
+<E3><HomeTeam>Macclesfield</HomeTeam><AwayTeam>Burton</AwayTeam></E3>
+<E3><HomeTeam>Morecambe</HomeTeam><AwayTeam>Plymouth</AwayTeam></E3>
+<E3><HomeTeam>Northampton</HomeTeam><AwayTeam>Gillingham</AwayTeam></E3>
+<E3><HomeTeam>Oxford</HomeTeam><AwayTeam>Southend</AwayTeam></E3>
+<E3><HomeTeam>Shrewsbury</HomeTeam><AwayTeam>Dag and Red</AwayTeam></E3>
+<E3><HomeTeam>Swindon</HomeTeam><AwayTeam>Port Vale</AwayTeam></E3>
+<E3><HomeTeam>Torquay</HomeTeam><AwayTeam>Crewe</AwayTeam></E3>
+<EC><HomeTeam>Alfreton Town</HomeTeam><AwayTeam>Bath City</AwayTeam></EC>
+<EC><HomeTeam>Barrow</HomeTeam><AwayTeam>Newport County</AwayTeam></EC>
+<EC><HomeTeam>Ebbsfleet</HomeTeam><AwayTeam>Lincoln</AwayTeam></EC>
+<EC><HomeTeam>Fleetwood Town</HomeTeam><AwayTeam>Luton</AwayTeam></EC>
+<EC><HomeTeam>Gateshead</HomeTeam><AwayTeam>AFC Telford United</AwayTeam></EC>
+<EC><HomeTeam>Grimsby</HomeTeam><AwayTeam>Southport</AwayTeam></EC>
+<EC><HomeTeam>Hayes and Yeading</HomeTeam><AwayTeam>Stockport</AwayTeam></EC>
+<EC><HomeTeam>Kidderminster</HomeTeam><AwayTeam>Mansfield</AwayTeam></EC>
+<EC><HomeTeam>Tamworth</HomeTeam><AwayTeam>Cambridge</AwayTeam></EC>
+<EC><HomeTeam>Wrexham</HomeTeam><AwayTeam>Braintree Town</AwayTeam></EC>
+<EC><HomeTeam>York</HomeTeam><AwayTeam>Forest Green</AwayTeam></EC>
+<F1><HomeTeam>Lorient</HomeTeam><AwayTeam>Marseille</AwayTeam></F1>
+<F1><HomeTeam>Toulouse</HomeTeam><AwayTeam>Montpellier</AwayTeam></F1>
+<F1><HomeTeam>Auxerre</HomeTeam><AwayTeam>Brest</AwayTeam></F1>
+<F1><HomeTeam>Lille</HomeTeam><AwayTeam>Paris SG</AwayTeam></F1>
+<F1><HomeTeam>Nancy</HomeTeam><AwayTeam>Caen</AwayTeam></F1>
+<F1><HomeTeam>Rennes</HomeTeam><AwayTeam>Ajaccio</AwayTeam></F1>
+<F1><HomeTeam>Sochaux</HomeTeam><AwayTeam>Bordeaux</AwayTeam></F1>
+<F1><HomeTeam>St Etienne</HomeTeam><AwayTeam>Dijon</AwayTeam></F1>
+<F1><HomeTeam>Valenciennes</HomeTeam><AwayTeam>Nice</AwayTeam></F1>
+<F2><HomeTeam>Chateauroux</HomeTeam><AwayTeam>Lens</AwayTeam></F2>
+<F2><HomeTeam>Clermont</HomeTeam><AwayTeam>Monaco</AwayTeam></F2>
+<F2><HomeTeam>Istres</HomeTeam><AwayTeam>Arles</AwayTeam></F2>
+<F2><HomeTeam>Le Havre</HomeTeam><AwayTeam>Reims</AwayTeam></F2>
+<F2><HomeTeam>Le Mans</HomeTeam><AwayTeam>Laval</AwayTeam></F2>
+<F2><HomeTeam>Metz</HomeTeam><AwayTeam>Angers</AwayTeam></F2>
+<F2><HomeTeam>Nantes</HomeTeam><AwayTeam>Amiens</AwayTeam></F2>
+<F2><HomeTeam>Sedan</HomeTeam><AwayTeam>Guingamp</AwayTeam></F2>
+<F2><HomeTeam>Tours</HomeTeam><AwayTeam>Bastia</AwayTeam></F2>
+<F2><HomeTeam>Troyes</HomeTeam><AwayTeam>Boulogne</AwayTeam></F2>
+<I1><HomeTeam>Cagliari</HomeTeam><AwayTeam>Chievo</AwayTeam></I1>
+<I1><HomeTeam>Palermo</HomeTeam><AwayTeam>Catania</AwayTeam></I1>
+<I1><HomeTeam>Roma</HomeTeam><AwayTeam>Napoli</AwayTeam></I1>
+<I1><HomeTeam>Atalanta</HomeTeam><AwayTeam>Fiorentina</AwayTeam></I1>
+<I1><HomeTeam>Bologna</HomeTeam><AwayTeam>Genoa</AwayTeam></I1>
+<I1><HomeTeam>Inter</HomeTeam><AwayTeam>Cesena</AwayTeam></I1>
+<I1><HomeTeam>Lecce</HomeTeam><AwayTeam>Parma</AwayTeam></I1>
+<I1><HomeTeam>Novara</HomeTeam><AwayTeam>Juventus</AwayTeam></I1>
+<I1><HomeTeam>Siena</HomeTeam><AwayTeam>Milan</AwayTeam></I1>
+<I1><HomeTeam>Udinese</HomeTeam><AwayTeam>Lazio</AwayTeam></I1>
+<I2><HomeTeam>Brescia</HomeTeam><AwayTeam>Sassuolo</AwayTeam></I2>
+<I2><HomeTeam>Verona</HomeTeam><AwayTeam>Empoli</AwayTeam></I2>
+<I2><HomeTeam>Ascoli</HomeTeam><AwayTeam>Livorno</AwayTeam></I2>
+<I2><HomeTeam>Cittadella</HomeTeam><AwayTeam>Varese</AwayTeam></I2>
+<I2><HomeTeam>Grosseto</HomeTeam><AwayTeam>Padova</AwayTeam></I2>
+<I2><HomeTeam>Gubbio</HomeTeam><AwayTeam>Pescara</AwayTeam></I2>
+<I2><HomeTeam>Modena</HomeTeam><AwayTeam>Juve Stabia</AwayTeam></I2>
+<I2><HomeTeam>Reggina</HomeTeam><AwayTeam>Albinoleffe</AwayTeam></I2>
+<I2><HomeTeam>Sampdoria</HomeTeam><AwayTeam>Bari</AwayTeam></I2>
+<I2><HomeTeam>Torino</HomeTeam><AwayTeam>Crotone</AwayTeam></I2>
+<I2><HomeTeam>Vicenza</HomeTeam><AwayTeam>Nocerina</AwayTeam></I2>
+<N1><HomeTeam>Groningen</HomeTeam><AwayTeam>Graafschap</AwayTeam></N1>
+<N1><HomeTeam>Heracles</HomeTeam><AwayTeam>Heerenveen</AwayTeam></N1>
+<N1><HomeTeam>Utrecht</HomeTeam><AwayTeam>NAC Breda</AwayTeam></N1>
+<N1><HomeTeam>Vitesse</HomeTeam><AwayTeam>Excelsior</AwayTeam></N1>
+<N1><HomeTeam>VVV Venlo</HomeTeam><AwayTeam>Den Haag</AwayTeam></N1>
+<N1><HomeTeam>Feyenoord</HomeTeam><AwayTeam>AZ Alkmaar</AwayTeam></N1>
+<N1><HomeTeam>Nijmegen</HomeTeam><AwayTeam>Waalwijk</AwayTeam></N1>
+<N1><HomeTeam>Roda</HomeTeam><AwayTeam>PSV Eindhoven</AwayTeam></N1>
+<N1><HomeTeam>Twente</HomeTeam><AwayTeam>Ajax</AwayTeam></N1>
+<P1><HomeTeam>Sp Braga</HomeTeam><AwayTeam>Olhanense</AwayTeam></P1>
+<P1><HomeTeam>Gil Vicente</HomeTeam><AwayTeam>Guimaraes</AwayTeam></P1>
+<P1><HomeTeam>Maritimo</HomeTeam><AwayTeam>Porto</AwayTeam></P1>
+<P1><HomeTeam>Beira Mar</HomeTeam><AwayTeam>Pacos Ferreira</AwayTeam></P1>
+<P1><HomeTeam>Leiria</HomeTeam><AwayTeam>Feirense</AwayTeam></P1>
+<P1><HomeTeam>Rio Ave</HomeTeam><AwayTeam>Benfica</AwayTeam></P1>
+<P1><HomeTeam>Setubal</HomeTeam><AwayTeam>Nacional</AwayTeam></P1>
+<P1><HomeTeam>Sp Lisbon</HomeTeam><AwayTeam>Academica</AwayTeam></P1>
+<SC0><HomeTeam>Dundee United</HomeTeam><AwayTeam>Hearts</AwayTeam></SC0>
+<SC0><HomeTeam>Dunfermline</HomeTeam><AwayTeam>Aberdeen</AwayTeam></SC0>
+<SC0><HomeTeam>Kilmarnock</HomeTeam><AwayTeam>Inverness C</AwayTeam></SC0>
+<SC0><HomeTeam>Motherwell</HomeTeam><AwayTeam>St Johnstone</AwayTeam></SC0>
+<SC0><HomeTeam>Celtic</HomeTeam><AwayTeam>Rangers</AwayTeam></SC0>
+<SC0><HomeTeam>St Mirren</HomeTeam><AwayTeam>Hibernian</AwayTeam></SC0>
+<SC1><HomeTeam>Ayr</HomeTeam><AwayTeam>Dundee</AwayTeam></SC1>
+<SC1><HomeTeam>Livingston</HomeTeam><AwayTeam>Morton</AwayTeam></SC1>
+<SC1><HomeTeam>Partick</HomeTeam><AwayTeam>Falkirk</AwayTeam></SC1>
+<SC1><HomeTeam>Raith Rvs</HomeTeam><AwayTeam>Queen of Sth</AwayTeam></SC1>
+<SC1><HomeTeam>Ross County</HomeTeam><AwayTeam>Hamilton</AwayTeam></SC1>
+<SC2><HomeTeam>Airdrie Utd</HomeTeam><AwayTeam>East Fife</AwayTeam></SC2>
+<SC2><HomeTeam>Arbroath</HomeTeam><AwayTeam>Stenhousemuir</AwayTeam></SC2>
+<SC2><HomeTeam>Brechin</HomeTeam><AwayTeam>Cowdenbeath</AwayTeam></SC2>
+<SC2><HomeTeam>Forfar</HomeTeam><AwayTeam>Albion Rvs</AwayTeam></SC2>
+<SC2><HomeTeam>Stirling</HomeTeam><AwayTeam>Dumbarton</AwayTeam></SC2>
+<SC3><HomeTeam>Annan Athletic</HomeTeam><AwayTeam>Peterhead</AwayTeam></SC3>
+<SC3><HomeTeam>Clyde</HomeTeam><AwayTeam>Alloa</AwayTeam></SC3>
+<SC3><HomeTeam>East Stirling</HomeTeam><AwayTeam>Berwick</AwayTeam></SC3>
+<SC3><HomeTeam>Elgin</HomeTeam><AwayTeam>Montrose</AwayTeam></SC3>
+<SC3><HomeTeam>Stranraer</HomeTeam><AwayTeam>Queens Park</AwayTeam></SC3>
+<SP1><HomeTeam>Espanol</HomeTeam><AwayTeam>Sp Gijon</AwayTeam></SP1>
+<SP1><HomeTeam>Getafe</HomeTeam><AwayTeam>Mallorca</AwayTeam></SP1>
+<SP1><HomeTeam>Levante</HomeTeam><AwayTeam>Granada</AwayTeam></SP1>
+<SP1><HomeTeam>Sociedad</HomeTeam><AwayTeam>Santander</AwayTeam></SP1>
+<SP1><HomeTeam>Villarreal</HomeTeam><AwayTeam>Osasuna</AwayTeam></SP1>
+<SP1><HomeTeam>Betis</HomeTeam><AwayTeam>Ath Madrid</AwayTeam></SP1>
+<SP1><HomeTeam>Malaga</HomeTeam><AwayTeam>Valencia</AwayTeam></SP1>
+<SP1><HomeTeam>Real Madrid</HomeTeam><AwayTeam>Sevilla</AwayTeam></SP1>
+<SP1><HomeTeam>Vallecano</HomeTeam><AwayTeam>Barcelona</AwayTeam></SP1>
+<SP1><HomeTeam>Zaragoza</HomeTeam><AwayTeam>Ath Bilbao</AwayTeam></SP1>
+<SP2><HomeTeam>Cordoba</HomeTeam><AwayTeam>Guadalajara</AwayTeam></SP2>
+<SP2><HomeTeam>Almeria</HomeTeam><AwayTeam>La Coruna</AwayTeam></SP2>
+<SP2><HomeTeam>Celta</HomeTeam><AwayTeam>Barcelona B</AwayTeam></SP2>
+<SP2><HomeTeam>Gimnastic</HomeTeam><AwayTeam>Alcoyano</AwayTeam></SP2>
+<SP2><HomeTeam>Girona</HomeTeam><AwayTeam>Alcorcon</AwayTeam></SP2>
+<SP2><HomeTeam>Las Palmas</HomeTeam><AwayTeam>Huesca</AwayTeam></SP2>
+<SP2><HomeTeam>Murcia</HomeTeam><AwayTeam>Sabadell</AwayTeam></SP2>
+<SP2><HomeTeam>Numancia</HomeTeam><AwayTeam>Villarreal B</AwayTeam></SP2>
+<SP2><HomeTeam>Valladolid</HomeTeam><AwayTeam>Cartagena</AwayTeam></SP2>
+<SP2><HomeTeam>Elche</HomeTeam><AwayTeam>Hercules</AwayTeam></SP2>
+<SP2><HomeTeam>Xerez</HomeTeam><AwayTeam>Recreativo</AwayTeam></SP2>
+
+
+
+
+
+
+</FIXTURES>
